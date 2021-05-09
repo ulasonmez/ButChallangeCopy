@@ -1,8 +1,8 @@
 main: me.Blume.RandomTwist.Main
-name: RandomTwist
+name: CopyAndPaste
 author: Blume
 version: 1.0
 
 commands:
-  randomtwist:
-  randomtwiststop:
+  copyandpaste:
+  copyandpastestop:

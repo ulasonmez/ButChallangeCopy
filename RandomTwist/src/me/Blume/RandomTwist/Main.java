@@ -12,8 +12,8 @@ public class Main extends JavaPlugin{
 	
 	@Override
 	public void onEnable() {
-		getCommand("randomtwist").setExecutor(new ItemInteract(this));
-		getCommand("randomtwiststop").setExecutor(new ItemInteract(this));
+		getCommand("copyandpaste").setExecutor(new ItemInteract(this));
+		getCommand("copyandpastestop").setExecutor(new ItemInteract(this));
 	}
 
 	@Override

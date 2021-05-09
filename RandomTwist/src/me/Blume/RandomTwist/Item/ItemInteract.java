@@ -42,18 +42,18 @@ public class ItemInteract implements Listener,CommandExecutor{
 	private int randomtwistkomut;
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(sender instanceof Player && label.equalsIgnoreCase("randomtwist") && sender.isOp()) {
-			sender.sendMessage(ChatColor.GREEN+"Plugin basladi!");
+		if(sender instanceof Player && label.equalsIgnoreCase("copyandpaste") && sender.isOp()) {
+			sender.sendMessage(ChatColor.GREEN+"Plugin started!");
 			randomtwistkomut=1;
 			return true;
 		}
-		else if(sender instanceof Player && label.equalsIgnoreCase("randomtwiststop") && sender.isOp()) {
-			sender.sendMessage(ChatColor.GREEN+"Plugin durdu");
+		else if(sender instanceof Player && label.equalsIgnoreCase("copyandpastestop") && sender.isOp()) {
+			sender.sendMessage(ChatColor.GREEN+"Plugin stopped");
 			randomtwistkomut=0;
 			return true;
 		}
 		if(!sender.isOp()) {
-			sender.sendMessage(ChatColor.RED+"Buna yetkin yok.");
+			sender.sendMessage(ChatColor.RED+"You don't have permission.");
 		}
 		
 		
