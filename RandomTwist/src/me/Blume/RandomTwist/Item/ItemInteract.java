@@ -27,17 +27,11 @@ import me.Blume.RandomTwist.Main;
 
 public class ItemInteract implements Listener,CommandExecutor{
 		private final Main plugin;
-		public final ItemStack Printer;
+		Items item = new Items();
 	public ItemInteract(Main plugin) {
 		this.plugin = plugin;
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
-		Printer = new ItemStack(Material.STICK);
-		ItemMeta meta = Printer.getItemMeta();
-		meta.addEnchant(Enchantment.DURABILITY, 100, true);
-		meta.setDisplayName("Printer");
-		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		Printer.setItemMeta(meta);
-	
+		item.createPrinter();
 	}
 	private int randomtwistkomut;
 	@Override
@@ -68,14 +62,14 @@ public class ItemInteract implements Listener,CommandExecutor{
 			Action action = event.getAction();
 			
 			if(action.equals(Action.LEFT_CLICK_BLOCK)) {
-				if(Printer.isSimilar(player.getInventory().getItemInMainHand())) {
+				if(item.Printer.isSimilar(player.getInventory().getItemInMainHand())) {
 					player.sendMessage(ChatColor.GREEN+"Kopyalandi");
 					block1=block.getType();
 					}
 				
 				}
 			if(action.equals(action.RIGHT_CLICK_BLOCK)) {
-				if(Printer.isSimilar(player.getInventory().getItemInMainHand())) {
+				if(item.Printer.isSimilar(player.getInventory().getItemInMainHand())) {
 					block.setType(block1);
 				}
 			}
@@ -106,7 +100,7 @@ public class ItemInteract implements Listener,CommandExecutor{
 				}
 			}
 				if(stickshape) {
-					inv.setResult(Printer);
+					inv.setResult(Items.Printer);
 				}
 			}
 		}
