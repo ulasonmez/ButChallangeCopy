@@ -69,7 +69,7 @@ public class ItemInteract implements Listener,CommandExecutor{
 			
 			if(action.equals(Action.LEFT_CLICK_BLOCK)) {
 				if(Printer.isSimilar(player.getInventory().getItemInMainHand())) {
-					player.sendMessage(ChatColor.RED +""+block.getType()+ChatColor.GREEN+"Kopyalandi");
+					player.sendMessage(ChatColor.GREEN+"Kopyalandi");
 					block1=block.getType();
 					}
 				
