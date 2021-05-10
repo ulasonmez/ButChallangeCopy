@@ -13,7 +13,6 @@ public class Main extends JavaPlugin{
 	@Override
 	public void onEnable() {
 		getCommand("copyandpaste").setExecutor(new ItemInteract(this));
-		getCommand("copyandpastestop").setExecutor(new ItemInteract(this));
 	}
 
 	@Override

@@ -2,6 +2,7 @@ main: me.Blume.RandomTwist.Main
 name: CopyAndPaste
 author: Blume
 version: 1.0
+api-version: 1.16
 
 commands:
   copyandpaste:
