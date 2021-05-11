@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class Items implements Listener {
 	public static int randomtwistkomut;
-	public static final ItemStack Printer = new ItemStack(Material.STICK);
+	public static ItemStack Printer = new ItemStack(Material.STICK);
 	public void createPrinter() {
 		ItemMeta meta = Printer.getItemMeta();
 		meta.setDisplayName("Printer");
@@ -33,7 +33,6 @@ public class Items implements Listener {
 		//345
 		//678
 		ItemStack[] matrix = inv.getMatrix();
-		if(Items.randomtwistkomut==1) {
 			if(matrix[0]!=null && matrix[1]!=null && matrix[2]!=null &&
 					matrix[3]!=null && matrix[4]!=null && matrix[5]!=null &&
 					matrix[6]!=null && matrix[7]!=null && matrix[8]!=null ) {
@@ -53,15 +52,7 @@ public class Items implements Listener {
 					else return;
 				}
 			}
-		}
-		else if(Items.randomtwistkomut==0) {
-			for(Player p: Bukkit.getOnlinePlayers()) {
-				Inventory inv1 = p.getInventory();
-				if(inv1.contains(Items.Printer)) {
-					inv1.remove(Items.Printer);
-					return;
-				}
-			}
-		}
+		
+		
 }
 }
