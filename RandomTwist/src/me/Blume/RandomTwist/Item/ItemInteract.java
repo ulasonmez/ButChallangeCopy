@@ -28,14 +28,14 @@ import me.Blume.RandomTwist.Main;
 
 
 public class ItemInteract implements Listener,CommandExecutor{
-		private final Main plugin;
-		Items item = new Items();
+	private final Main plugin;
+	Items item = new Items();
 	public ItemInteract(Main plugin) {
 		this.plugin = plugin;
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 		item.createPrinter();
 	}
-	
+
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(sender instanceof Player && label.equalsIgnoreCase("copyandpaste") && sender.isOp()) {
@@ -43,10 +43,10 @@ public class ItemInteract implements Listener,CommandExecutor{
 			Items.randomtwistkomut=1;
 			return true;
 		}
-		
-		
-		
-	return false;
+
+
+
+		return false;
 	}
 	public Material block1;
 	ItemStack item1 = Items.Printer;
@@ -55,25 +55,25 @@ public class ItemInteract implements Listener,CommandExecutor{
 		if(Items.randomtwistkomut==1) {
 			Player player = event.getPlayer();
 			Block block = event.getClickedBlock();
-			
-			
+
+
 			Action action = event.getAction();
-			
+
 			if(action.equals(Action.LEFT_CLICK_BLOCK) && player.getInventory().getItemInMainHand().equals(item1)) {
-					block1 = Material.getMaterial(block.getType().name());
-					player.sendMessage(ChatColor.AQUA+""+block.getType()+ChatColor.GREEN+" Kopyalandi");
-				
-				}
-			if(action.equals(Action.RIGHT_CLICK_BLOCK) && player.getInventory().getItemInMainHand().equals(item1)) {
-				
-				block.setType(block1);
-				
+				block1 = Material.getMaterial(block.getType().name());
+				player.sendMessage(ChatColor.AQUA+""+block.getType()+ChatColor.GREEN+" Kopyalandi");
+
 			}
+			if(action.equals(Action.RIGHT_CLICK_BLOCK) && player.getInventory().getItemInMainHand().equals(item1)) {
+
+				block.setType(block1);
+
 			}
 		}
-		
-	
-	
-	
-	
+	}
+
+
+
+
+
 }

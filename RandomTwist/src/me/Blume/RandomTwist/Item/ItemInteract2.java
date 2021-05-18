@@ -11,6 +11,7 @@ import me.Blume.RandomTwist.Main;
 
 public class ItemInteract2 implements CommandExecutor {
 	Items item = new Items();
+	@SuppressWarnings("unused")
 	private Main plugin;
 	public ItemInteract2(Main plugin) {
 		this.plugin = plugin;
